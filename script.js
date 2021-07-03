@@ -70,7 +70,7 @@ menuButton.addEventListener("click", () => {
     overlay.classList.remove("fade-in");
     overlay.classList.add("has-fade");
     body.classList.remove("no-scroll")
-    logoIcon.style.backgroundImage = "url('../images/logo-bookmark.svg')";
+    logoIcon.style.backgroundImage = "url('./images/logo-bookmark.svg')";
   }
 
   // Nav Open
@@ -80,6 +80,6 @@ menuButton.addEventListener("click", () => {
     overlay.classList.add("fade-in");
     body.classList.add("no-scroll")
 
-    logoIcon.style.backgroundImage = "url('../images/logo-bookmark-white.svg')";
+    logoIcon.style.backgroundImage = "url('./images/logo-bookmark-white.svg')";
   }
 });
