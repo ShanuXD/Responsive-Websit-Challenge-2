@@ -1,0 +1,119 @@
+.header{
+    padding: 0 5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    position: relative;
+    @include breakpoint-up(large){
+        text-align: left;
+    }
+    .overlay{
+        opacity: 1;
+        position: fixed;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+       
+        background-color:$secondry-dark-blue-trans;
+        z-index: 10;
+
+    }
+
+}
+
+.nav{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    &__logo{
+        z-index: 100;
+        .logo--icon{
+            display: inline-block;
+            height: 100%;
+            background-repeat: no-repeat;
+            width: 18rem;
+            height: 3rem;
+            background-image: url("../images/logo-bookmark.svg");
+            
+        }
+
+    }
+
+    &__links{
+        display: none;
+        @include breakpoint-up(medium){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       a{
+           margin: 0 2rem;
+           font-size: 1.5rem;
+           letter-spacing: 1.5px;
+           
+       }
+
+       .btn{
+           background-color: $primary-red;
+           color: #fff;
+           box-shadow: none;
+       }
+
+    }
+
+    &__links--mob{
+        text-align: center;
+        margin-top: 10rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        a{
+            color: #efefee;
+            text-transform: uppercase;
+            display: block;
+            padding: 4rem 0;
+            border-bottom: .5px solid #eee;
+            &:first-child{
+                border-top: .5px solid #eee;
+            }
+
+            &:hover{
+                color: #fff;
+            }
+        }
+        
+    }
+    .bars{
+        background-image: url("../images/icon-hamburger.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 2rem;
+        width: 2rem;
+        margin-bottom: 1.5rem;
+        z-index: 100;
+        @include breakpoint-up(medium){
+            display: none;
+        }
+
+
+        &.close{
+            background-image: url("../images/icon-close.svg");
+        }
+
+        // &:hover{
+        //     background-image: url("../images/icon-close.svg");
+        //     background-size: contain;
+        //     background-repeat: no-repeat;
+        //     background-position: center center;
+        //     height: 2rem;
+        //     width: 2rem;
+        //     background-color: black;
+        //     color: black;
+        // }
+    }
+
+}

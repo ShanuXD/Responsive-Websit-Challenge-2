@@ -1,0 +1,80 @@
+.FAQ{
+    margin-bottom: 10rem;
+    @include breakpoint-up(medium){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .display__center{
+        @include breakpoint-up(medium){
+            width: 70%;
+        }
+    }
+    
+    &__text{
+
+        h1{
+            margin-bottom: 3rem;
+        }
+        p{
+            margin-bottom: 3rem;
+        }
+
+    }
+
+}
+
+.FAQ__questions{
+
+    a{
+        margin-top: 5rem;
+        background-color: $primary-blue;
+        color: #fff;
+    }
+
+}
+
+.question__card{
+    padding: 3rem 2rem;
+    text-align: left;
+    border-bottom: 1px solid #242424;
+    &--header{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &--title{
+        
+
+    }
+    &--btn{
+        &:hover{
+            cursor: pointer;
+        }
+        &.arrow-btn{
+            background-image: url("../images/icon-arrow.svg");
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 10px;
+            width: 15px;
+        }
+
+        &.close-btn{
+            background-image: url("../images/icon-close.svg");
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 12px;
+            width: 15px;
+        }
+    }
+
+    &--body{
+        margin-top: 4rem;
+        text-align: left;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 2;
+    }
+}

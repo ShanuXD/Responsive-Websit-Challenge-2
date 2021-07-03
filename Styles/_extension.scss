@@ -1,0 +1,121 @@
+.extension{
+    margin-bottom: 10rem;
+    width: 100%;
+    @include breakpoint-up(medium){
+       margin-bottom: 30rem;
+    }
+    &__text{
+        h1{
+            margin-bottom: 3rem;
+        }
+        p{
+            margin-bottom: 3rem;
+            @include breakpoint-up(medium){
+                padding: 0 10rem;
+              }
+            @include breakpoint-up(large){
+               padding: 0 20rem;
+             }
+        }
+    }
+
+   &__cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    @include breakpoint-up(medium){
+        display: inline-block;
+    }
+   }
+
+    .card{
+        padding: 5rem 1rem ;
+        margin-bottom: 4rem;
+        border-radius: 10px;
+        box-shadow: 0 .2rem .2rem .2rem rgba(0,0,0,.1);
+        
+        transition: all 300ms ease-in;
+        
+
+        &:hover{
+            scale: 1.1;
+            box-shadow: 0 1rem .5rem .5rem rgba(0,0,0,.1);
+            
+        }
+
+        @include breakpoint-up(medium){
+            width: 260px;
+            margin: 2rem;
+        }
+        &--2{
+            @include breakpoint-up(large){
+                margin-top: 15rem;
+            }
+        }
+       
+        &--3{
+            @include breakpoint-up(large){
+                margin-top: 30rem;
+            }
+        }
+
+        .chrome{
+            background-image: url("../images/logo-chrome.svg");
+            margin-bottom: 2rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 10rem;
+            min-width: 20rem;
+            
+
+        }
+        .firefox{
+            background-image: url("../images/logo-firefox.svg");
+            margin-bottom: 2rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 10rem;
+            min-width: 20rem;
+
+
+        }
+        .opera{
+            background-image: url("../images/logo-opera.svg");
+            margin-bottom: 2rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            min-height: 10rem;
+            min-width: 20rem;
+            
+        }
+
+        &--title{
+            font-size: 2rem;
+        }
+        &--version{
+            font-size: 1.2rem;
+            color: $secondry-grayish-blue;
+        }
+        &--linebreak{
+
+        }
+        a{
+            background-color: $primary-blue;
+            color: #fff;
+        }
+
+    }
+}
+
+.all-cards{
+    @include breakpoint-up(large){
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

@@ -1,0 +1,190 @@
+.features{
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-up(medium){
+        margin-bottom: 20rem;
+      }
+    &__text{
+        
+        margin-bottom: 5rem;
+        h1{
+            margin-bottom: 3rem;
+            }
+        
+        p{
+
+            @include breakpoint-up(medium){
+                padding: 0 10rem;
+              }
+            @include breakpoint-up(large){
+               padding: 0 20rem;
+             }
+            
+        }
+    }
+
+    &__link{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem;
+        @include breakpoint-up(large){
+            flex-direction: row;
+            justify-content: center;
+          }
+        span{
+            position: relative;
+            padding: 2rem 2rem;
+            border-bottom: 1px solid $secondry-grayish-blue;
+            @include breakpoint-up(large){
+                border-bottom: none
+            }
+            &:first-child{
+                border-top: 1px solid $secondry-grayish-blue;
+                @include breakpoint-up(large){
+                    border-top: none
+                }
+              }
+            &::before{
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 180px;
+                left: 50%;
+                right: 0;
+                bottom: -3px;
+                transform: translate(-50%);
+                background-color: $primary-red;
+                opacity: 0;
+                transition: opacity 300ms ease-in;
+
+                
+            }
+            &:hover{
+                opacity: 1;
+
+                &::before{
+                    opacity: 1;
+                }
+            }
+
+
+        }
+        
+
+    }
+
+    &__displays{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__display{
+        position: relative;
+        @include breakpoint-up(large){
+            display: flex;
+        }
+
+        &::before{
+            content: "" ;
+            position: absolute;
+            min-height: 25rem;
+            min-width: 50rem;
+            // width: 100%;
+            background-color: $primary-blue-light;
+            z-index: -1;
+            border-bottom-right-radius: 100px;
+            right: 40%;
+            top: 7%;
+            @include breakpoint-up(large){
+            top: -10%;
+            right: 70%;
+            min-height: 35rem;
+            min-width: 50rem;
+            }
+
+        }
+
+        .features--image-1{
+            background-image: url("../images/illustration-features-tab-1.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            min-width: 30rem;
+            min-height: 25rem;
+            margin-bottom: 15rem;
+            
+            @include breakpoint-up(medium){
+                width: 50rem;
+                }
+            @include breakpoint-up(large){
+                margin-bottom: 0;
+                // min-width: 100rem;
+                }
+
+        }
+        .features--image-2{
+            background-image: url("../images/illustration-features-tab-2.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            min-width: 30rem;
+            min-height: 25rem;
+            margin-bottom: 15rem;
+            @include breakpoint-up(medium){
+                width: 50rem;
+                }
+            @include breakpoint-up(large){
+                margin-bottom: 0;
+                // min-width: 100rem;
+                }
+
+        }
+        .features--image-3{
+            background-image: url("../images/illustration-features-tab-3.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            min-width: 30rem;
+            min-height: 25rem;
+            margin-bottom: 15rem;
+            @include breakpoint-up(medium){
+                width: 50rem;
+                }
+            @include breakpoint-up(large){
+                margin-bottom: 0;
+                // min-width: 100rem;
+                }
+
+        }
+
+        &--text{
+            margin-top: 5rem;
+            @include breakpoint-up(large){
+                margin-top: 0;
+                text-align: left;
+                width: 50rem;
+            }
+            h1{
+                margin-bottom: 2rem;
+            }
+            p{
+                margin-bottom: 2rem;
+                @include breakpoint-up(large){
+                    padding-right: 0rem;
+                }
+                
+            }
+
+            a{
+                @include breakpoint-up(large){
+                    margin-left: 0;
+                }
+            }
+
+        }
+    }
+}

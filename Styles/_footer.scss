@@ -1,0 +1,87 @@
+.footer{
+    background: $secondry-dark-blue;
+    padding: 2rem 0;
+    height: 40rem;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-up(medium) {
+        height: 10rem;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 4rem;
+        
+
+    }
+    &--left{
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+
+    .logo{
+        width: 18rem;
+        height: 3rem;
+        margin-bottom: 4rem;
+        @include breakpoint-up(medium) {
+           margin-bottom: 0;
+           
+        }
+        span{
+            display: inline-block;
+            height: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            background-image: url("../images/logo-bookmark-footer.svg");
+        }
+    }
+
+    .links{
+        @include breakpoint-up(medium) {
+            display: flex;
+        }
+        li{
+            margin-bottom: 3rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            padding: 0 1rem;
+            @include breakpoint-up(medium) {
+                margin-bottom: .8rem;
+             }
+        }
+    }
+    .social-links{
+        margin-top: 4rem;
+        @include breakpoint-up(medium) {
+            margin-top: 0;
+            
+        }
+        .facebook{
+            background-image: url("../images/icon-facebook.svg");
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 2.5rem;
+            min-width: 2.5rem;
+            margin-right: 3rem;
+    
+        }
+        .twitter{
+            background-image: url("../images/icon-twitter.svg");
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 2.5rem;
+            min-width: 2.5rem;
+        }
+    }
+
+}

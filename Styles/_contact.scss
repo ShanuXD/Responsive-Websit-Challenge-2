@@ -1,0 +1,66 @@
+.contact{
+    background: $primary-blue;
+    padding: 5rem 0;
+    @include breakpoint-up(medium){
+        padding: 10rem 0;
+    }
+
+    &__text{
+        color: #fff;
+        
+        span{
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 50px;
+            letter-spacing: .5rem;
+        }
+        h1{
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        form{
+            @include breakpoint-up(medium){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        input{
+            padding: 1.5rem ;
+            border-radius: 5px;
+            width: 90%;
+            margin-bottom: 2rem;
+            border-style: none;
+            outline: none;
+            @include breakpoint-up(medium){
+                margin-bottom: 0;
+                width: 40%;
+                margin-right: 2rem;
+            }
+        }
+
+        a{
+            background: $primary-red;
+            color: #fff;
+            width: 90%;
+            @include breakpoint-up(medium){
+                margin-bottom: 0;
+                width: 15rem;
+                padding: 1.5rem;
+                margin: 0;
+                color: $primary-red;
+                background-color: #fff;
+
+                &:hover{
+                    color: #fff;
+                    background-color: $primary-red;
+                }
+            }
+        }
+    }
+}
